@@ -72,9 +72,6 @@ export default function EventPage({ evt }) {
           <a className={styles.back}>{'<'} Go Back</a>
         </Link>
       </div>
-
-      {/* <h3>{router.query.slug}</h3> */}
-      {/* <button onClick={() => router.push('/')}>Go Home</button> */}
     </Layout>
   )
 }
@@ -101,14 +98,3 @@ export async function getStaticProps({ params: { slug } }) {
     revalidate: 1,
   }
 }
-
-// export async function getServerSideProps({ query: { slug } }) {
-//   const res = await fetch(`${API_URL}/api/events/${slug}`)
-//   const events = await res.json()
-
-//   return {
-//     props: {
-//       evt: events[0],
-//     },
-//   }
-// }
