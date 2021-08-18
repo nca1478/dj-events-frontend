@@ -12,6 +12,7 @@ export default function LoginPage() {
   const [password, setPassword] = useState('')
   const { login, error } = useContext(AuthContext)
 
+  // Show start session error
   useEffect(() => {
     error && toast.error(error)
   })

@@ -14,6 +14,11 @@ export default function RegisterPage() {
   const [passwordConfirm, setPasswordConfirm] = useState('')
   const { register, error } = useContext(AuthContext)
 
+  // Show start session error
+  useEffect(() => {
+    error && toast.error(error)
+  })
+
   const handleSubmit = (e) => {
     e.preventDefault()
 
