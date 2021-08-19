@@ -1,4 +1,7 @@
+// Next Dependencies
 import Link from 'next/link'
+
+// Config
 import { PER_PAGE } from '@/config/index'
 
 export default function Pagination({ page, total }) {

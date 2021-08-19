@@ -1,6 +1,11 @@
+// React Dependencies
 import { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
+
+// Api URL
 import { API_URL } from '@/config/index'
+
+// Styles
 import styles from '@/styles/Form.module.css'
 
 export default function ImageUpload({ evtId, imageUpload, token }) {

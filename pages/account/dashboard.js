@@ -1,10 +1,21 @@
-import { ToastContainer, toast } from 'react-toastify'
+// Next Dependencies
 import { useRouter } from 'next/router'
-import { parseCookies } from '@/helpers/index'
+
+// React Dependencies
+import { ToastContainer, toast } from 'react-toastify'
+
+// Components
 import Layout from '@/components/Layout'
-import { API_URL } from '@/config/index'
-import styles from '@/styles/Dashboard.module.css'
 import DashboardEvent from '@/components/DashboardEvent'
+
+// Api URL
+import { API_URL } from '@/config/index'
+
+// Helpers
+import { parseCookies } from '@/helpers/index'
+
+// Styles
+import styles from '@/styles/Dashboard.module.css'
 
 export default function DashboardPage({ events, token }) {
   const router = useRouter()

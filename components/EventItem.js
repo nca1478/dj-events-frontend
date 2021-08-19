@@ -1,5 +1,8 @@
+// Next Dependencies
 import Link from 'next/link'
 import Image from 'next/image'
+
+// Styles
 import styles from '@/styles/EventItem.module.css'
 
 export default function EventItem({ evt }) {

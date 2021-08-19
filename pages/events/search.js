@@ -1,9 +1,16 @@
+// Dependencies
 import qs from 'qs'
+
+// Next Dependencies
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { API_URL } from '@/config/index'
+
+// Components
 import Layout from '@/components/Layout'
 import EventItem from '@/components/EventItem'
+
+// API URL
+import { API_URL } from '@/config/index'
 
 export default function SearchPage({ events }) {
   const router = useRouter()

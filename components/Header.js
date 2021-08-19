@@ -1,9 +1,18 @@
-import { useContext } from 'react'
+// Next Dependencies
 import Link from 'next/link'
-import Search from './Search'
+
+// React Dependencies
+import { useContext } from 'react'
 import { FaSignInAlt, FaSignOutAlt } from 'react-icons/fa'
-import styles from '@/styles/Header.module.css'
+
+// Components
+import Search from './Search'
+
+// Context
 import AuthContext from '@/context/AuthContext'
+
+// Api URL
+import styles from '@/styles/Header.module.css'
 
 export default function Header() {
   const { user, logout } = useContext(AuthContext)

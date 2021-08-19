@@ -1,8 +1,13 @@
-import { useRouter } from 'next/router'
+// Next Dependencies
 import Head from 'next/head'
+import { useRouter } from 'next/router'
+
+// Components
 import Header from './Header'
 import Footer from './Footer'
 import Showcase from './Showcase'
+
+// Styles
 import styles from '@/styles/Layout.module.css'
 
 export default function Layout({ title, keywords, description, children }) {

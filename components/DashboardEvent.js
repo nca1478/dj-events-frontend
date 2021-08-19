@@ -1,6 +1,11 @@
+// Next Dependencies
 import Link from 'next/link'
-import styles from '@/styles/DashboardEvent.module.css'
+
+// React Dependencies
 import { FaPencilAlt, FaTimes } from 'react-icons/fa'
+
+// Styles
+import styles from '@/styles/DashboardEvent.module.css'
 
 export default function DashboardEvent({ evt, handleDelete }) {
   return (

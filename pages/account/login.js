@@ -1,10 +1,19 @@
-import { FaUser } from 'react-icons/fa'
+// Next Dependencies
+import Link from 'next/link'
+
+// React Dependencies
+import { useState, useEffect, useContext } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-import { useState, useEffect, useContext } from 'react'
-import Link from 'next/link'
+import { FaUser } from 'react-icons/fa'
+
+// Components
 import Layout from '@/components/Layout'
+
+// Context
 import AuthContext from '@/context/AuthContext'
+
+// Styles
 import styles from '@/styles/AuthForm.module.css'
 
 export default function LoginPage() {

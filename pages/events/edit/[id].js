@@ -1,16 +1,29 @@
+// Dependencies
 import moment from 'moment'
+
+// Next Dependencies
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState } from 'react'
 import { useRouter } from 'next/router'
+
+// React Dependencies
+import { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import { FaImage } from 'react-icons/fa'
+
+// Components
+import ImageUpload from '@/components/ImageUpload'
 import Layout from '@/components/Layout'
 import Modal from '@/components/Modal'
+
+// API URL
 import { API_URL } from '@/config/index'
-import ImageUpload from '@/components/ImageUpload'
+
+// Helpers
 import { parseCookies } from '@/helpers/index'
-import 'react-toastify/dist/ReactToastify.css'
+
+// Styles
 import styles from '@/styles/Form.module.css'
 
 export default function EditEventPage({ evt, token }) {

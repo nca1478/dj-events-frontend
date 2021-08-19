@@ -1,3 +1,4 @@
+// Dependencies
 import cookie from 'cookie'
 
 export function parseCookies(req) {

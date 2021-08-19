@@ -1,4 +1,7 @@
+// Next Dependencies
 import Link from 'next/link'
+
+// Styles
 import styles from '@/styles/Footer.module.css'
 
 export default function Footer() {

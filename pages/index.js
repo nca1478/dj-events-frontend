@@ -1,7 +1,12 @@
+// Next Dependencies
+import Link from 'next/link'
+
+// Components
 import Layout from '@/components/Layout'
 import EventItem from '@/components/EventItem'
+
+// API URL
 import { API_URL } from '@/config/index'
-import Link from 'next/link'
 
 export default function HomePage({ events }) {
   return (

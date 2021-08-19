@@ -3,9 +3,12 @@
 // -- https://devrecipes.net/modal-component-with-next-js/
 // -- https://nextjs.org/docs/advanced-features/custom-document
 
-import { useState, useEffect } from 'react'
+// React Dependencies
 import ReactDOM from 'react-dom'
+import { useState, useEffect } from 'react'
 import { FaTimes } from 'react-icons/fa'
+
+// Styles
 import styles from '@/styles/Modal.module.css'
 
 export default function Modal({ show, onClose, children, title }) {

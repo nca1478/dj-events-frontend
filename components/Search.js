@@ -1,5 +1,10 @@
-import { useState } from 'react'
+// Next Dependencies
 import { useRouter } from 'next/router'
+
+// React Dependencies
+import { useState } from 'react'
+
+// Styles
 import styles from '@/styles/Search.module.css'
 
 export default function Search() {

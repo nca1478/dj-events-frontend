@@ -1,5 +1,10 @@
-const { createContext, useState, useEffect } = require('react')
+// Next Dependencies
 const { useRouter } = require('next/router')
+
+// React Dependencies
+const { createContext, useState, useEffect } = require('react')
+
+// API URL
 import { NEXT_URL } from '@/config/index'
 
 const AuthContext = createContext()
