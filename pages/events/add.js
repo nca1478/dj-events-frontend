@@ -1,12 +1,12 @@
-import { parseCookies } from '@/helpers/index'
-import { ToastContainer, toast } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
+import Link from 'next/link'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
-import Link from 'next/link'
+import { parseCookies } from '@/helpers/index'
+import { ToastContainer, toast } from 'react-toastify'
 import Layout from '@/components/Layout'
 import { API_URL } from '@/config/index'
 import styles from '@/styles/Form.module.css'
+import 'react-toastify/dist/ReactToastify.css'
 
 export default function AddEventPage({ token }) {
   const [values, setValues] = useState({

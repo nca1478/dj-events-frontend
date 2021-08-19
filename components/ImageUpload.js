@@ -1,8 +1,9 @@
 import { useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify'
 import { API_URL } from '@/config/index'
 import styles from '@/styles/Form.module.css'
 
-export default function ImageUpload({ evtId, imageUpload }) {
+export default function ImageUpload({ evtId, imageUpload, token }) {
   const [image, setImage] = useState(null)
 
   const handleSubmit = async (e) => {
@@ -16,10 +17,19 @@ export default function ImageUpload({ evtId, imageUpload }) {
 
     const res = await fetch(`${API_URL}/upload`, {
       method: 'POST',
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
       body: formData,
     })
 
-    if (res.ok) {
+    if (!res.ok) {
+      if (res.status === 403 || res.status === 401) {
+        toast.error('Unauthorized')
+        return
+      }
+      toast.error('Something Went Wrong')
+    } else {
       imageUpload()
     }
   }
@@ -30,6 +40,7 @@ export default function ImageUpload({ evtId, imageUpload }) {
 
   return (
     <div className={styles.form}>
+      <ToastContainer />
       <h1>Upload Event Image</h1>
       <form onSubmit={handleSubmit}>
         <div className={styles.file}>
