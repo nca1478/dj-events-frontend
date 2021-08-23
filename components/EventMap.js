@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 // React Dependencies
 import { useState, useEffect } from 'react'
-import ReactMapGl, { marker } from 'react-map-gl'
+import ReactMapGl, { Marker } from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import Geocode from 'react-geocode'
 
@@ -46,7 +46,7 @@ export default function EventMap({ evt }) {
       onViewportChange={(vp) => setViewport(vp)}
     >
       <Marker key={evt.id} latitute={lat} longitude={lng}>
-        <Imagen src="/images/pin.svg" width={30} height={30}></Imagen>
+        <Image src="/images/pin.svg" width={30} height={30}></Image>
       </Marker>
     </ReactMapGl>
   )
